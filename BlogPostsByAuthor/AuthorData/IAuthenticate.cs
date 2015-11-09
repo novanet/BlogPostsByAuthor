@@ -23,6 +23,7 @@ namespace BloggPostsByAuthor.AuthorData
             Contract.Requires<ArgumentNullException>(!string.IsNullOrEmpty(loginSettings.Url));
             Contract.Requires<ArgumentNullException>(!string.IsNullOrEmpty(loginSettings.UserName));
             Contract.Requires<ArgumentNullException>(!string.IsNullOrEmpty(loginSettings.Password));
+            Contract.Requires<ArgumentNullException>(!string.IsNullOrEmpty(loginSettings.ClientSecret));
 
             return Task.FromResult(new AuthenticationData());
         }

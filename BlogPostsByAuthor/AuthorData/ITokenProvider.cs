@@ -21,6 +21,7 @@ namespace BloggPostsByAuthor.AuthorData
             Contract.Requires(!string.IsNullOrEmpty(loginSettings.Url));
             Contract.Requires(!string.IsNullOrEmpty(loginSettings.UserName));
             Contract.Requires(!string.IsNullOrEmpty(loginSettings.Password));
+            Contract.Requires(!string.IsNullOrEmpty(loginSettings.ClientSecret));
 
             return Task.FromResult("");
         }

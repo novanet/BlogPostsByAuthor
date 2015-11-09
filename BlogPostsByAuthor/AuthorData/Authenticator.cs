@@ -21,7 +21,7 @@ namespace BloggPostsByAuthor.AuthorData
                 client.BaseAddress = new Uri(loginSettings.Url);
 
                 var response = await client.SendAsync(
-                        new AuthenticationRequest(loginSettings.UserName, loginSettings.Password).Request
+                        new AuthenticationRequest(loginSettings.UserName, loginSettings.Password, loginSettings.ClientSecret).Request
                 );
                 if (response.IsSuccessStatusCode)
                 {

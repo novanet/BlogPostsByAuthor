@@ -29,6 +29,7 @@ namespace BlogPostsByAuthor.Web.Controllers
                 Url = ConfigurationManager.AppSettings["BlogUrl"],
                 UserName = ConfigurationManager.AppSettings["UserName"],
                 Password = ConfigurationManager.AppSettings["Password"],
+                ClientSecret = ConfigurationManager.AppSettings["ClientSecret"],
             };
         }
     }
