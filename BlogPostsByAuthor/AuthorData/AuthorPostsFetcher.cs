@@ -26,7 +26,7 @@ namespace BloggPostsByAuthor.AuthorData
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var response = await client.GetAsync("/ghost/api/v0.1/posts/?author=" + author);
+                var response = await client.GetAsync("/ghost/api/v0.1/posts/?filter:author:" + author);
 
                 if (response.IsSuccessStatusCode)
                 {
